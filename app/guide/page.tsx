@@ -4,7 +4,7 @@ import Stripe from 'stripe';
 import { guideTitle, guideContent, mealPlanWeeks } from './content';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: '2025-01-27.acacia',
+  apiVersion: '2026-02-25.clover',
 });
 
 interface PageProps {
