@@ -12,6 +12,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'carnivore-diet-weight-loss',
   ]
 
+  const goalSlugs = [
+    'weight-loss',
+    'muscle-gain',
+    'women',
+    'beginners',
+    'lion-diet',
+    'diabetes',
+    'athletes',
+    'autoimmune',
+  ]
+
   const blogUrls = blogSlugs.map((slug) => ({
     url: `${baseUrl}/blog/${slug}`,
     lastModified: new Date('2026-03-17'),
@@ -19,13 +30,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
+  const goalUrls = goalSlugs.map((slug) => ({
+    url: `${baseUrl}/goals/${slug}`,
+    lastModified: new Date('2026-03-18'),
+    changeFrequency: 'monthly' as const,
+    priority: 0.85,
+  }))
+
   return [
     {
       url: baseUrl,
-      lastModified: new Date('2026-03-17'),
+      lastModified: new Date('2026-03-18'),
       changeFrequency: 'weekly',
       priority: 1,
     },
+    {
+      url: `${baseUrl}/goals`,
+      lastModified: new Date('2026-03-18'),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    ...goalUrls,
     {
       url: `${baseUrl}/blog`,
       lastModified: new Date('2026-03-17'),
