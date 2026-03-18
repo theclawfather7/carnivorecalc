@@ -7,7 +7,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
   apiVersion: '2026-02-25.clover' as any,
 })
 
-const RESEND_API_KEY = 're_DqcaSBS8_DZC3zvN22qUfTf1zNcfvHuAb'
+const RESEND_API_KEY = process.env.RESEND_API_KEY!
 const DOWNLOAD_URL = 'https://carnivorecalc.com/downloads/carnivore-30-day-meal-plan.pdf'
 
 async function sendDeliveryEmail(email: string) {
