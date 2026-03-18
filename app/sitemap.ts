@@ -12,6 +12,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'carnivore-diet-weight-loss',
   ]
 
+  const foodSlugs = [
+    'ribeye-steak', 'eggs', 'bacon', 'ground-beef', 'salmon',
+    'chicken-thighs', 'butter', 'beef-liver', 'lamb-chops', 'sardines',
+    'pork-belly', 'beef-tallow', 'new-york-strip', 'shrimp', 'heavy-cream',
+  ]
+
   const goalSlugs = [
     'weight-loss',
     'muscle-gain',
@@ -51,6 +57,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     ...goalUrls,
+    {
+      url: `${baseUrl}/foods`,
+      lastModified: new Date('2026-03-18'),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    ...foodSlugs.map((slug) => ({
+      url: `${baseUrl}/foods/${slug}`,
+      lastModified: new Date('2026-03-18'),
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    })),
     {
       url: `${baseUrl}/blog`,
       lastModified: new Date('2026-03-17'),
