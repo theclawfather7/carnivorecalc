@@ -23,7 +23,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <p style={{ color: '#4b5563', fontSize: '0.875rem', marginBottom: '0.75rem' }}>
             © {new Date().getFullYear()} CarnivoreCalc. Not medical advice.
           </p>
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem' }}>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', flexWrap: 'wrap' }}>
+            <a href="/blog" style={{ color: '#6b7280', fontSize: '0.875rem', textDecoration: 'none' }}>Blog</a>
+            <a href="/guide" style={{ color: '#6b7280', fontSize: '0.875rem', textDecoration: 'none' }}>Meal Plan Guide</a>
             <a href="/privacy" style={{ color: '#6b7280', fontSize: '0.875rem', textDecoration: 'none' }}>Privacy Policy</a>
             <a href="/terms" style={{ color: '#6b7280', fontSize: '0.875rem', textDecoration: 'none' }}>Terms of Service</a>
           </div>
