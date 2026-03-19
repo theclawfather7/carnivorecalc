@@ -18,6 +18,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'pork-belly', 'beef-tallow', 'new-york-strip', 'shrimp', 'heavy-cream',
   ]
 
+  const recipeSlugs = [
+    'ribeye-steak', 'ground-beef-bowl', 'bacon-and-eggs', 'salmon-fillet',
+    'beef-liver', 'scrambled-eggs', 'chuck-roast', 'bone-broth',
+  ]
+
   const goalSlugs = [
     'weight-loss',
     'muscle-gain',
@@ -76,6 +81,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     ...blogUrls,
+    {
+      url: `${baseUrl}/recipes`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.9,
+    },
+    ...recipeSlugs.map((slug) => ({
+      url: `${baseUrl}/recipes/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    })),
     {
       url: `${baseUrl}/guide`,
       lastModified: new Date('2026-03-17'),
