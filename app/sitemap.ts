@@ -94,6 +94,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     })),
     {
+      url: `${baseUrl}/meal-plans`,
+      lastModified: new Date('2026-03-20'),
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    ...['week-1-meal-plan', 'week-2-meal-plan', '30-day-meal-plan', 'beginner-meal-plan', 'budget-meal-plan', 'shopping-list', 'meal-prep-guide'].map((slug) => ({
+      url: `${baseUrl}/meal-plans/${slug}`,
+      lastModified: new Date('2026-03-20'),
+      changeFrequency: 'monthly' as const,
+      priority: 0.88,
+    })),
+    {
       url: `${baseUrl}/guide`,
       lastModified: new Date('2026-03-17'),
       changeFrequency: 'monthly',

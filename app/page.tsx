@@ -176,7 +176,25 @@ export default function Home() {
           </div>
         )}
 
-        <div className="mt-12 text-center text-stone-600 text-sm">
+        <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-3">
+          {[
+            { href: '/meal-plans', label: '🗓️ Meal Plans', desc: 'Week 1, 30-day & more' },
+            { href: '/recipes', label: '🥩 Recipes', desc: 'Zero-carb cooking guides' },
+            { href: '/goals', label: '🎯 By Goal', desc: 'Personalized calculators' },
+            { href: '/foods', label: '📋 Food List', desc: 'What to eat on carnivore' },
+          ].map(link => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="block bg-stone-800/50 border border-stone-700 hover:border-red-500/50 rounded-xl p-3 text-center transition-all hover:bg-stone-800"
+            >
+              <div className="text-sm font-semibold text-stone-200">{link.label}</div>
+              <div className="text-xs text-stone-500 mt-0.5">{link.desc}</div>
+            </a>
+          ))}
+        </div>
+
+        <div className="mt-8 text-center text-stone-600 text-sm">
           <p>Trusted by carnivore dieters in 30+ countries · Based on real-world carnivore macro research</p>
         </div>
       </div>

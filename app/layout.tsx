@@ -27,6 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <a href="/blog" style={{ color: '#6b7280', fontSize: '0.875rem', textDecoration: 'none' }}>Blog</a>
             <a href="/goals" style={{ color: '#6b7280', fontSize: '0.875rem', textDecoration: 'none' }}>By Goal</a>
             <a href="/recipes" style={{ color: '#6b7280', fontSize: '0.875rem', textDecoration: 'none' }}>Recipes</a>
+            <a href="/meal-plans" style={{ color: '#6b7280', fontSize: '0.875rem', textDecoration: 'none' }}>Meal Plans</a>
             <a href="/guide" style={{ color: '#6b7280', fontSize: '0.875rem', textDecoration: 'none' }}>Meal Plan Guide</a>
             <a href="/privacy" style={{ color: '#6b7280', fontSize: '0.875rem', textDecoration: 'none' }}>Privacy Policy</a>
             <a href="/terms" style={{ color: '#6b7280', fontSize: '0.875rem', textDecoration: 'none' }}>Terms of Service</a>
